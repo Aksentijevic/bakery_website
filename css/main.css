@@ -57,11 +57,13 @@ div.col-navbar{
   padding-left: 0;
 }
 
-/*.navbar-nav li:before {
+.navbar-nav li:not(:first-child).nav-item .nav-link:before {
   content: "~";
   padding-right: 8px;
+  margin-left: 10px;
+  margin-right: 10px;
   color: white;
-}*/
+}
 
 ul.navbar-nav li.nav-item a.nav-fonts {
   text-transform: uppercase;
