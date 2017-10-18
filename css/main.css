@@ -55,11 +55,25 @@ div.col-navbar{
   padding-right: 8px;
   margin-left: 5px;
   margin-right: 5px;
-  color: white;
+  color: white; 
 }
 
 ul.navbar-nav li.nav-item a.nav-fonts {
   text-transform: uppercase;
   letter-spacing: 5px;
   color:white;
-} 
+}
+
+div.soc-icon {
+  padding-top: 5px;
+  margin-left: 5%;
+}
+
+div.soc-icon a {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+div.soc-icon a i {
+  color: white;
+}
