@@ -2,9 +2,9 @@
    Author's custom styles
    ========================================================================== */
 
-
 body, html {
   height: 100%;
+  font-family: 'Alegreya Sans', sans-serif;
 }
 
 .fill {
@@ -15,14 +15,56 @@ body, html {
   height: 100%;
 }
 
+
+
+/* ========================================================================== 
+  Background images for containers
+  ========================================================================== */
+
 .bg1 {
-  background-image: url('../img/bg.png');
+  background-image: url('../img/bg1.png');
+}
+
+.bg2 {
+  background-image: url('../img/bg2.png');
+}
+
+.bg3 {
+  background-image: url('../img/bg3.png');
+}
+
+.bg4 {
+  background-image: url('../img/bg4.png');
+}
+
+.bg5 {
+  background-image: url('../img/bg2.png');
 }
 
 
 
+/* ========================================================================== 
+  Setting up navbar
+  ========================================================================== */
 
+nav.navbar-bg {
+  background-color: rgba(0, 0, 0, 0.40);
+  height: 70px;
+}
 
+div.col-navbar{
+  padding-right: 0;
+  padding-left: 0;
+}
 
+/*.navbar-nav li:before {
+  content: "~";
+  padding-right: 8px;
+  color: white;
+}*/
 
-
+ul.navbar-nav li.nav-item a.nav-fonts {
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  color:white;
+} 
