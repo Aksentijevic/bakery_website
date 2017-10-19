@@ -21,7 +21,7 @@ body, html {
 .border-con {
   width: 100%;
   height: 115px;
-  float: left;
+  z-index: 4;
   background-position: center;
   margin-top: -40px;
   background-repeat: no-repeat;
@@ -211,3 +211,31 @@ div.row-mg-top {
   Container2
   ========================================================================== */
 
+.left-con {
+  margin: auto;
+  max-width: 400px;
+}
+
+h2.h2-con-2 {
+  font-size: 48px;
+  color: rgb(86,83,76);
+  font-family: "Alegreya-Bold";
+  font-weight: bold;
+  text-align: center;
+}
+
+h5.h5-con-2 {
+  font-size: 14px;
+  color: rgb(173, 125, 65);
+  font-family: "Alegreya-Bold";
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+div.left-con > p {
+  font-size: 14px;
+  color: rgb(86,83,76);
+  font-family: "ProximaNova-Regular";
+  text-align: center;
+}
