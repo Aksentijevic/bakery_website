@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Author's custom styles
+   Body and modular class styling 
    ========================================================================== */
 
 body, html {
@@ -8,16 +8,28 @@ body, html {
 }
 
 .fill {
-  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100%;
   height: 100%;
 }
 
+.l-spacing {
+  letter-spacing: 5px;
+}
+
+.border-con {
+  width: 100%;
+  height: 115px;
+  float: left;
+  background-position: center;
+  margin-top: -40px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 /* ========================================================================== 
-  Background images for containers
+  Background images
   ========================================================================== */
 
 .bg1 {background-image: url('../img/bg1.png');}
@@ -29,6 +41,13 @@ body, html {
 .bg4 {background-image: url('../img/bg4.png');}
 
 .bg5 {background-image: url('../img/bg2.png');}
+
+.bg-border {background-image: url('../img/border.png');}
+
+.bg-shadow {
+  background-image: url('../img/bg_shadow.png');
+  background-position: center;
+}
 
 
 /* ========================================================================== 
@@ -45,8 +64,7 @@ nav.navbar-bg {
 }
 
 .navbar > a.pull-left {
-  margin-left: 10%;
-  max-width: 130px;
+  margin-left: 5%;
 }
 
 div.col-navbar{
@@ -65,7 +83,6 @@ div.col-navbar{
 
 .navbar-nav a.nav-item {
   text-transform: uppercase;
-  letter-spacing: 5px;
   color:white;
 }
 
@@ -85,14 +102,24 @@ div.soc-icon a i {
   color: white;
 }
 
+div.soc-icon a i:hover {
+  color: #a6a2a6;
+}
+
 @media (max-width: 992px) {
+
+  div.col-navbar {
+    background-color: rgb(74, 74, 74);
+  }
+
   div.collapse.show,
   div.collapsing {
-    background-color: rgba(74, 74, 74, 0.45);
+    background-color: rgb(74, 74, 74);
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 8px;
     z-index: 2;
   }
+
   .navbar > a.pull-left {
     margin-left: 0;
   }
@@ -101,26 +128,86 @@ div.soc-icon a i {
     margin-left: 0;
     margin-right: 0;
   }
+
   div.soc-icon {
     float: left;
   }
+
 }
 
 
 /* ========================================================================== 
-  Contetn1 jumbotron
+  Container1 jumbotron
   ========================================================================== */
 
-div.jumb-bg {
-  background: none;
+.jumbotron {
   text-align: center;
   color: white;
+  max-width: 960px;
+  background:none;
+  margin: auto;
 }
+
+div.jumbotron h1.jumbo-h1 {
+  font-size: 6vw;
+  color: rgb(255,255,255);
+  font-family: "PlayfairDisplay-Bold";
+  font-weight: bold;
+}
+
+div.jumbotron img.d-line {
+  margin: 30px 0 30px 0;
+}
+
+div.jumbotron > p {
+  font-size: 20px;
+  max-width: 360px;
+  margin: auto;
+  color: rgb(255,255,255);
+  font-family: "ProximaNova-Regular";
+}
+
+.btn-bakery {
+  margin-top: 30px;
+  width: 200px;
+  height: 50px;
+  padding-top: 15px
+}
+
+.btn-menu {
+  background-color: rgba(86,83,76,.5);
+  border: 1px dashed #9d9b93;
+  text-transform: uppercase;
+  color: white;
+  font-size: 14px;
+  font-family: "Alegreya-Bold";
+  font-weight: bold;
+}
+
+.btn-menu:hover {
+  background-color: rgba(0, 0, 0, .5);
+  border: 1px dashed #fff;
+  text-transform: uppercase;
+  color: #fdf9ca;
+}
+
 div.row-mg-top {
-  margin-top: 10%;
+  padding-top: 10%;
 }
-/*font-size: 92px;
-color: rgb(255,255,255);
-font-family: "PlayfairDisplay-Bold";
-font-weight: bold;
-box-shadow: 0px 1px 0px #3d2f28;*/
+
+@media (max-width: 750px) {
+
+  div.jumbotron > p {
+    font-size: 15px;
+  }
+  div.jumbotron h1.jumbo-h1 {
+    font-size: 25px;
+  }
+
+}
+
+
+/* ========================================================================== 
+  Container2
+  ========================================================================== */
+
