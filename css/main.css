@@ -31,7 +31,6 @@ body, html {
 }
 
 .bakery-img {
-  border-radius: 50%;
   width: 100px;
   height: 100px;
 }
@@ -49,20 +48,20 @@ body, html {
   Background images
   ========================================================================== */
 
-.bg1 {background-image: url('../img/bg1.png');}
+.bg1 {background-image: url('../img/content-bg/bg1.png');}
 
-.bg2 {background-image: url('../img/bg2.png');}
+.bg2 {background-image: url('../img/content-bg/bg2.png');}
 
-.bg3 {background-image: url('../img/bg3.png');}
+.bg3 {background-image: url('../img/content-bg/bg3.png');}
 
-.bg4 {background-image: url('../img/bg4.png');}
+.bg4 {background-image: url('../img/content-bg/bg4.png');}
 
-.bg5 {background-image: url('../img/bg2.png');}
+.bg5 {background-image: url('../img/content-bg/bg2.png');}
 
-.bg-border {background-image: url('../img/border.png');}
+.bg-border {background-image: url('../img/content-bg/border.png');}
 
 .bg-shadow {
-  background-image: url('../img/bg_shadow.png');
+  background-image: url('../img/content-bg/bg_shadow.png');
   background-position: center;
 }
 
@@ -227,7 +226,7 @@ div.jumbotron > p {
     font-size: 15px;
   }
   div.jumbotron h1.jumbo-h1 {
-    font-size: 25px;
+    font-size: 36px;
   }
 
 }
@@ -240,11 +239,12 @@ div.jumbotron > p {
 .left-con {
   margin: auto;
   max-width: 500px;
-  margin-top: 15%;
+  position: absolute;
+  right: 15%;
 }
 
 h2.h2-con-2 {
-  font-size: 3.5vw;;
+  font-size: 3.5vw;
   color: rgb(86,83,76);
   font-family: "Alegreya-Bold";
   font-weight: bold;
@@ -326,7 +326,6 @@ span.sub {
 .img-con {
   width: 80%;
   margin: auto;
-  /*padding-top: 15%;*/
   border-collapse: separate;
   border-spacing: 10px 10px;
 }
@@ -360,12 +359,20 @@ span.sub {
   left: 50%;
   transform: translate3d(-50%,-50%,0);
 }
+
 .txt-img {
-  color: red;
+  font-size: 30px;
+  color: rgb(201,177,118);
+  font-family: "Alegreya-Regular";
+  text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate3d(-50%,-50%,0);
+}
+
+div.bg2 div.row {
+  padding-top: 5%;
 }
 
 @media (max-width: 992px) {
@@ -411,4 +418,178 @@ span.sub {
   .col-lg-4.bakery-img {
     margin-top: 20px;
   }
+
+  .left-con {
+    position: static;
+  }
+
+  .txt-img {
+    font-size: 14px;
+  }
+
+}
+
+/* ========================================================================== 
+  Container3
+  ========================================================================== */
+
+.right-con {
+  background-image: url(../img/text_bg.png);
+  width: 550px;
+  height: 517px;
+}
+
+.left-im {
+  background-image: url(../img/im5.png);
+  width: 660px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 517px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 12% 100%, 0 85%, 0 75%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 12% 100%, 0 85%, 0 75%);
+  position: relative;
+}
+
+.left-im:before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  border-bottom: 80px solid white;
+  border-left: 80px solid white;
+  width: 0;
+}
+
+.con-inside {
+  padding: 10% 5% 5% 10%;
+  width: 100%;
+  margin: auto;
+}
+
+div.bg3 div.row {
+  padding-top: 10%;
+}
+
+h2.h2-con-3 {
+  font-size: 2.5vw;
+  color: rgb(86,83,76);
+  font-family: "Alegreya-Bold";
+  font-weight: bold;
+  text-align: left;
+}
+
+h5.h5-con-3 {
+  font-size: 14px;;
+  color: rgb(173, 125, 65);
+  font-family: "Alegreya-Bold";
+  font-weight: bold;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+div.right-con div.con-inside > p {
+  margin-top: 10%;
+  font-size: 16px;
+  color: rgb(86,83,76);
+  font-family: "ProximaNova-Regular";
+}
+
+
+.slider{
+  margin-top: 30%;
+  height: 100px;
+}
+
+.slider-center {
+  margin: auto;
+  width: 330px;
+}
+div.carousel-item img.bakery-img {
+  margin-left: 5px;
+}
+
+.slider-lft-arrow {
+  background-image: url('../img/slider/buttons/arrow_left.png');
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-size: 100% 100%;
+}
+
+.slider-rht-arrow{
+  background-image: url('../img/slider/buttons/arrow_right.png');
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-size: 100% 100%;
+}
+
+@media (max-width: 992px) {
+
+  .right-con {
+    background-image: url(../img/text_bg-flip.png);
+  }
+
+  .left-im {
+    width: 80%;
+    height: 300px;
+    margin: auto;
+  }
+
+  .right-con {
+    margin-top: -8% !important;
+    margin: auto;
+    width: 80%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+  }
+
+  h2.h2-con-3 {
+    font-size: 30px;
+  }
+
+  div.right-con div.con-inside > p {
+    font-size: 14px;
+  }
+
+  .left-im {
+    -webkit-clip-path: none;
+    clip-path: none;
+    position: static;
+  }
+
+  .left-im:before {
+    position: static;
+    border-bottom: none;
+    border-left: none;
+  }
+
+  .con-inside {
+    padding: 10% 10% 5% 10%;
+  }
+
+}
+
+@media (max-width: 720px) {
+
+  div.carousel-item div.slider-center img:not(:first-child).bakery-img {
+    display: none;
+  }
+
+  .slider-center {
+    margin: auto;
+    width: 110px;
+  }
+
+}
+
+@media (max-width: 608px) {
+
+  .left-im {
+    height: 200px;
+    background-size: cover;
+    bakcground-repeat: no-repeat;
+  }
+
 }
