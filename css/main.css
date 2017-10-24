@@ -511,17 +511,26 @@ div.carousel-item img.bakery-img {
 .slider-lft-arrow {
   background-image: url('../img/slider/buttons/arrow_left.png');
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   background-size: 100% 100%;
 }
 
 .slider-rht-arrow{
   background-image: url('../img/slider/buttons/arrow_right.png');
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   background-size: 100% 100%;
+}
+
+.nesto {
+  width: 200px;
+  height: 200px;
+  background: red;
+  position: absolute;
+  top: -100px;
+  right: 0px;
 }
 
 @media (max-width: 992px) {
