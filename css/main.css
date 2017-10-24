@@ -40,6 +40,7 @@ body, html {
 
   .fill {
     height: auto;
+    /*min-height: 0;*/
   }
 
 }
@@ -217,7 +218,11 @@ div.jumbotron > p {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate3d(-50%, -50%, 0);
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 
 @media (max-width: 750px) {
@@ -373,12 +378,29 @@ span.sub {
 
 div.bg2 div.row {
   padding-top: 10%;
+  padding-bottom: 50px;
+}
+
+@media (max-width: 1200px) {
+
+  .left-con {
+    right: auto;
+  }
+
 }
 
 @media (max-width: 992px) {
 
+  div.bg2 {
+    min-height: 0;
+  }
+
   .left-con {
     margin-top: 10px;
+  }
+
+  div.cook-table div.col-lg-4 img {
+    margin-top: 20px;
   }
 
   .img-con {
@@ -480,6 +502,7 @@ div.bg2 div.row {
 
 div.bg3 div.row {
   padding-top: 10%;
+  padding-bottom: 50px;
 }
 
 h2.h2-con-3 {
@@ -583,6 +606,10 @@ div.ready-in p {
 
 
 @media (max-width: 992px) {
+
+  div.bg3 {
+    min-height: 0;
+  }
 
   .right-con {
     background-image: url(../img/text_bg-flip.png);
@@ -699,6 +726,7 @@ div.ready-in p {
 
 div.bg4 div.row {
   padding-top: 10%;
+  padding-bottom: 50px;
 }
 
 div.left-con h2.h2-con-4 {
@@ -708,6 +736,16 @@ div.left-con h2.h2-con-4 {
   font-weight: bold;
   text-align: center;
 }
+
+div.box3 h2.h2-con-4 {
+  margin-top: 80px;
+  font-size: 44px;
+  color: rgb(86,83,76);
+  font-family: "Alegreya-Bold";
+  font-weight: bold;
+  text-align: center;
+}
+
 
 div.left-con h3.h3-con-4 {
   margin-top: 42px;
@@ -742,7 +780,106 @@ div.left-con p.price {
   margin-top: 0;
 }
 
+div.box3 p {
+  text-align: center;
+  padding-top: 50px;
+  width: 300px;
+  margin: auto;
+}
+
+.right-menu {
+
+}
+
+.box {
+  outline: 1px dashed black;
+  outline-offset: -10px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0 90%, 0 75%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 10% 100%, 0 90%, 0 75%);
+  position: absolute;
+}
+
+.box1 {
+  width: 367px;
+  margin-left: 120px;
+  margin-top: 50px;
+  height: 501px;
+  background-color: #d5d3ca;
+}
+
+.box2 {
+  width: 402px;
+  margin-left: 60px;
+  margin-top: 25px;
+  height: 548px;
+  background-color: #e5e2d9;
+}
+
+.box3 {
+  width: 440px;
+  height: 600px;
+  padding: 30px;
+  background-color: #f3f1e8;
+}
+
+.box3:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom: 60px solid white;
+  border-left: 45px solid white;
+  width: 0;
+}
+
+.head-txt {
+  float: left;
+  text-align: center;
+  padding-top: 15px;
+  width: 50%;
+  font-size: 14px;
+  color: rgb(86,83,76);
+  font-family: "Alegreya-Bold";
+  font-weight: bold;
+}
+
+.head-line {
+  width: 100%;
+}
+
+.btn-read {
+  border: 1px solid #969696;
+  border-radius: 0;
+  text-transform: uppercase;
+  color: rgb(164,125,94);;
+  font-size: 14px;
+  font-family: "Alegreya-Bold";
+  font-weight: bold;
+}
+
+.btn-read:hover {
+  border: 1px solid #000;
+  color: rgb(0,0,0);;
+}
+
+.btn-mrg {
+  text-align: center;
+}
+
+@media (max-width: 1120px) {
+
+  .box1,
+  .box2 {
+    display: none;
+  }
+
+}
+
 @media (max-width: 992px) {
+
+  div.bg4 {
+    min-height: 0;
+  }
 
   div.left-con h2.h2-con-4 {
     font-size: 50px;
@@ -750,6 +887,44 @@ div.left-con p.price {
 
   div.left-con h3.h3-con-4 {
     font-size: 28px;
+  }
+
+  .box {
+    margin-bottom: 50px !important;
+    margin: auto;
+    -webkit-clip-path: none;
+    clip-path: none;
+    position: static;
+  }
+  
+  .box3:after {
+    position: static;
+    border-bottom: none;
+    border-left: none;
+  }
+
+}
+
+@media (max-width: 510px) {
+
+  .box3 {
+    width: 90%;
+    height: auto;
+    min-height: 600px;
+  }
+
+  div.box3 h2.h2-con-4 {
+    margin-top: 20px;
+    font-size: 36px;
+  }
+
+  div.box3 p {
+    padding-top: 20px;
+    width: 90%;
+  }
+
+  .btn-bakery {
+    width: 140px;
   }
 
 }
