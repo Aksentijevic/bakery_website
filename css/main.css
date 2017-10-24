@@ -22,10 +22,10 @@ body, html {
 
 .border-con {
   width: 100%;
-  height: 115px;
-  z-index: 4;
+  height: 130px;
+  position: absolute;
   background-position: center;
-  margin-top: -40px;
+  margin-top: -58px;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -372,7 +372,7 @@ span.sub {
 }
 
 div.bg2 div.row {
-  padding-top: 5%;
+  padding-top: 10%;
 }
 
 @media (max-width: 992px) {
@@ -429,19 +429,31 @@ div.bg2 div.row {
 
 }
 
+@media (max-width: 608px) {
+
+  div.bg2 div.row div.col-lg-6 div.left-con {
+      padding-top: 50px;
+  }
+
+}
+
+
 /* ========================================================================== 
   Container3
   ========================================================================== */
 
 .right-con {
   background-image: url(../img/text_bg.png);
-  width: 550px;
+  width: 100%;
+  min-width: 580px;
+  background-size: cover;
+  background-position: center;
   height: 517px;
 }
 
 .left-im {
   background-image: url(../img/im5.png);
-  width: 660px;
+  width: 670px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
@@ -461,7 +473,7 @@ div.bg2 div.row {
 }
 
 .con-inside {
-  padding: 10% 5% 5% 10%;
+  padding: 5% 5% 0% 10%;
   width: 100%;
   margin: auto;
 }
@@ -471,7 +483,7 @@ div.bg3 div.row {
 }
 
 h2.h2-con-3 {
-  font-size: 2.5vw;
+  font-size: 3vw;
   color: rgb(86,83,76);
   font-family: "Alegreya-Bold";
   font-weight: bold;
@@ -495,9 +507,11 @@ div.right-con div.con-inside > p {
 }
 
 
-.slider{
-  margin-top: 30%;
+.slider {
   height: 100px;
+  margin-top: 25% !important;
+  margin: auto;
+  max-width: 450px;
 }
 
 .slider-center {
@@ -508,30 +522,65 @@ div.carousel-item img.bakery-img {
   margin-left: 5px;
 }
 
-.slider-lft-arrow {
+.slider-arrow {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background-size: 100% 100%;
+}
+
+.slider-lft-arr {
   background-image: url('../img/slider/buttons/arrow_left.png');
-  display: inline-block;
-  width: 60px;
-  height: 60px;
-  background-size: 100% 100%;
 }
 
-.slider-rht-arrow{
+.slider-rht-arr{
   background-image: url('../img/slider/buttons/arrow_right.png');
-  display: inline-block;
-  width: 60px;
-  height: 60px;
-  background-size: 100% 100%;
 }
 
-.nesto {
-  width: 200px;
-  height: 200px;
-  background: red;
-  position: absolute;
-  top: -100px;
-  right: 0px;
+.slider-lft-arr:hover {
+  background-image: url('../img/slider/buttons/arrow_left_active.png');
 }
+
+.slider-rht-arr:hover {
+  background-image: url('../img/slider/buttons/arrow_right_active.png');
+}
+
+.ready-in {
+  background-image: url(../img/ready.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: white;
+  width: 200px;
+  height: 180px;
+  position: absolute;
+  padding: 10px;
+  top: -90px;
+  right: -80px;
+  -webkit-box-shadow: 1px 28px 90px 1px rgba(0,0,0,0.62);
+  -moz-box-shadow: 1px 28px 90px 1px rgba(0,0,0,0.62);
+  box-shadow: 1px 28px 90px 1px rgba(0,0,0,0.62);
+}
+
+.col-min-w {
+  min-width: 580px;
+}
+
+div.ready-in h5.h5-con-3 {
+  text-align: center;
+  padding-top: 15px;
+}
+
+div.ready-in h2.h2-con-3 {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 56px;
+  color: rgb(212, 157, 89);
+}
+
+div.ready-in p {
+  text-align: center;
+}
+
 
 @media (max-width: 992px) {
 
@@ -549,7 +598,9 @@ div.carousel-item img.bakery-img {
     margin-top: -8% !important;
     margin: auto;
     width: 80%;
+    min-width: 200px;
     background-size: cover;
+    background-position: initial;
     background-repeat: no-repeat;
     height: auto;
   }
@@ -577,6 +628,32 @@ div.carousel-item img.bakery-img {
   .con-inside {
     padding: 10% 10% 5% 10%;
   }
+  
+  .slider {
+    margin-top: 15% !important;
+  }
+
+  .ready-in { 
+    position: static;
+    width: 80%;
+    min-width: 200px;
+    margin: auto;
+    height: 100px;
+    box-shadow: none;
+  }
+
+  div.ready-in h5.h5-con-3 {
+    padding-top: 0;
+  }
+
+  div.ready-in h2.h2-con-3 {
+    padding-top: 0;
+    font-size: 28px;
+  }
+
+  .col-min-w {
+    min-width: 200px;
+  }
 
 }
 
@@ -597,8 +674,82 @@ div.carousel-item img.bakery-img {
 
   .left-im {
     height: 200px;
+    min-width: 200px;
     background-size: cover;
-    bakcground-repeat: no-repeat;
+    background-repeat: no-repeat;
+  }
+
+  .slider-arrow {
+    width: 35px;
+    height: 35px;
+  }
+
+}
+
+@media (max-width: 420px) {
+
+  .right-con {background-position: center;}
+
+}
+
+
+/* ========================================================================== 
+  Container4
+  ========================================================================== */
+
+div.bg4 div.row {
+  padding-top: 10%;
+}
+
+div.left-con h2.h2-con-4 {
+  font-size: 60px;
+  color: rgb(255,255,255);
+  font-family: "Alegreya-Bold";
+  font-weight: bold;
+  text-align: center;
+}
+
+div.left-con h3.h3-con-4 {
+  margin-top: 42px;
+  font-size: 30px;
+  color: rgb(255,255,255);
+  font-family: "Alegreya-Bold";
+  text-align: center;
+}
+
+div.left-con h5.h5-con-4 {
+  font-size: 16px;;
+  color: rgb(212, 188, 159);
+  font-family: "Alegreya-Bold";
+  font-weight: bold;
+  text-align: left;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+div.left-con p.p-con-4 {
+  margin-top: 0;
+  color: white;
+  font-size: 16px;
+  font-family: "Alegreya-Bold";
+}
+
+div.left-con p.price {
+  font-size: 36px;
+  color: rgb(223,198,145);
+  font-family: "Alegreya-Regular";
+  text-align: center;
+  margin-top: 0;
+}
+
+@media (max-width: 992px) {
+
+  div.left-con h2.h2-con-4 {
+    font-size: 50px;
+  }
+
+  div.left-con h3.h3-con-4 {
+    font-size: 28px;
   }
 
 }
