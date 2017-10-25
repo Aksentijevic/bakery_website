@@ -5,11 +5,20 @@
 body, html {
   height: 100%;
   font-family: 'Alegreya Sans', sans-serif;
+  letter-spacing: 2px;
+  background-color: #f3f1e8;
 }
 
 @font-face { font-family: Scriptina; src: url('../fonts/SCRIPTIN.ttf'); } 
 
 .fill {
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+  height: 100%;
+}
+
+.fill-top {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100%;
@@ -45,6 +54,8 @@ body, html {
 
 }
 
+
+
 /* ========================================================================== 
   Background images
   ========================================================================== */
@@ -57,13 +68,13 @@ body, html {
 
 .bg4 {background-image: url('../img/content-bg/bg4.png');}
 
-.bg5 {background-image: url('../img/content-bg/bg2.png');}
-
 .bg-border {background-image: url('../img/content-bg/border.png');}
 
 .bg-shadow {
   background-image: url('../img/content-bg/bg_shadow.png');
   background-position: center;
+  width: 100%;
+  display: table;
 }
 
 
@@ -129,11 +140,19 @@ div.soc-icon a i:hover {
   color: #a6a2a6;
 }
 
+@media (max-width: 1050px) {
+
+  nav.navbar a.navbar-brand {font-size: 20px;}
+
+}
+
 @media (max-width: 992px) {
 
   div.col-navbar {
     background-color: rgb(74, 74, 74);
   }
+
+  nav.navbar a.navbar-brand {font-size: 25px;}
 
   div.collapse.show,
   div.collapsing {
@@ -160,7 +179,7 @@ div.soc-icon a i:hover {
 
 
 /* ========================================================================== 
-  Container1 jumbotron
+  Container1 
   ========================================================================== */
 
 .jumbotron {
@@ -215,14 +234,9 @@ div.jumbotron > p {
 }
 
 .row-mg-top {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+  display: table-row;
+  vertical-align: middle;
+  text-align: center;
 }
 
 @media (max-width: 750px) {
@@ -236,6 +250,14 @@ div.jumbotron > p {
 
 }
 
+
+@media (max-width: 320px) {
+
+  .bg-shadow {
+    display: block;
+  }
+  
+}
 
 /* ========================================================================== 
   Container2
@@ -788,7 +810,7 @@ div.box3 p {
 }
 
 .right-menu {
-
+ /*obrisi ovo iz html-a*/
 }
 
 .box {
@@ -927,4 +949,230 @@ div.box3 p {
     width: 140px;
   }
 
+}
+
+
+/* ========================================================================== 
+  Container5
+  ========================================================================== */
+
+.head-con-5 {
+  width: 40%;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-image: url(../img/head-con.png);
+  background-position: top center;
+  height: 140px;
+  position: relative;
+}
+
+div.head-con-5 h2.h2-con-5 {
+  font-size: 3vw;
+  color: rgb(86,83,76);
+  font-family: "Alegreya-Bold";
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+div.head-con-5 h5.h5-con-5 {
+  font-size: 1.1vw;
+  color: rgb(164,125,94);
+  font-family: "Alegreya-Bold";
+  margin-bottom: -10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.components {
+  width: 80%;
+  margin: auto;
+  padding: 5px;
+  text-align: center;
+}
+
+div.components h3.h3-con-5 {
+  font-size: 30px;
+  margin-top: 10px;
+  color: rgb(164,125,94);
+  font-family: "Alegreya-Bold";
+  font-weight: bold;
+}
+
+div.components p.p-con-5 {
+  font-size: 16px;
+  color: rgb(86,83,76);
+  font-family: "ProximaNova-Regular";
+  text-align: center;
+}
+
+div.components img.bakery-img {
+  -webkit-box-shadow: 2px 28px 63px -9px rgba(0,0,0,0.68);
+  -moz-box-shadow: 2px 28px 63px -9px rgba(0,0,0,0.68);
+  box-shadow: 2px 28px 63px -9px rgba(0,0,0,0.68);
+}
+
+.recepie-con {
+  margin: auto;
+  background-image: url(../img/recipe/bg1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 50px;
+  width: 80%;
+  height: 556px;
+  outline: 10px solid white;
+  outline-offset: -11px;
+  border: 1px solid #d8d8d8;
+}
+
+.btn-recipe {
+  width: 171px;
+  height: 60px;
+  font-size: 18px;
+  color: rgb(223,198,145);
+  letter-spacing: 0;
+  font-family: "Alegreya-Bold";
+  font-weight: bold;
+  border-radius: 0;
+  background-color: white;
+  border: 1px dashed #dcc28f;
+}
+
+.btn-recipe:hover {
+  color: rgb(111, 97, 68);
+  border: 1px dashed #44413a;
+}
+
+.btn-mrg1 {
+  position: relative;
+  margin-top: 490px;
+  margin-left: -70px;
+}
+
+.row-height {
+  max-height: 670px;
+}
+
+.info-block {
+  position: static;
+  height: 200px;
+  box-shadow: none;
+}
+
+.info-recipe {
+  position: absolute;
+  right: 13%;
+  top: 30px;
+  box-shadow: 1px 20px 90px 1px rgba(0,0,0,0.42);
+}
+
+.transp-block {
+  margin-bottom: 1px;
+  background-image: unset;
+  background-color: rgba(255, 255, 255, 0.74);
+}
+
+div.info-recipe div.transp-block h2.h2-con-3 {
+  color: #636363;
+}
+
+@media (max-width: 992px) {
+
+  .head-con-5 {width: 100%;}
+  div.head-con-5 h2.h2-con-5 {font-size: 32px;}
+  div.head-con-5 h5.h5-con-5 {font-size: 14px;}
+  div.components p.p-con-5 {font-size: 14px;}
+  div.components h3.h3-con-5 {font-size: 24px;}
+
+  .components {
+    width: 33.3%;
+    float: left;
+  }
+
+  div.row div.col-lg-4,
+  div.row div.col-xs-12 {
+    padding-top: 50px;
+  }
+
+  .recepie-con {
+    height: auto;
+    min-height: 300px;
+    min-width: 200px;
+    margin-top: 0;
+  }
+
+  .btn-mrg1 {
+    position: static;
+    text-align: center;
+    margin: 0;
+  }
+
+  .info-block {
+    position: static;
+    height: 100px;
+    border:1px solid #d8d8d8;
+    box-shadow: none;
+  }
+
+  .info-recipe {
+    position: static;
+    box-shadow: none;
+  }
+
+}
+
+@media (max-width: 450px) {
+
+  div.head-con-5 h2.h2-con-5 {font-size: 20px;}
+  div.head-con-5 h5.h5-con-5 {
+    font-size: 10px;
+    margin-bottom: -20px;
+  }
+  div.components p.p-con-5 {font-size: 12px;}
+  div.components h3.h3-con-5 {font-size: 18px;}
+
+  .components {
+    width: 80%;
+    float: none;
+  }
+
+  .btn-recipe {
+    width: 80%;
+  }
+
+}
+
+/* ========================================================================== 
+  Footer
+  ========================================================================== */
+
+.footer {
+  text-align: center;
+}
+
+.left-footer {
+
+}
+
+.right-footer {
+  
+}
+
+.center-footer {
+  
+}
+
+div.navbar-nav ul li {
+  display: inline-block;
 }
