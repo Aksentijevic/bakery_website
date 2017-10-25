@@ -87,7 +87,8 @@ div.navbar-nav {
   z-index: 1;
 }
 
-nav.navbar a.navbar-brand{
+nav.navbar a.navbar-brand,
+div.center-footer a.navbar-brand {
   font-size: 30px;
   margin-top: -5px;
   font-family: "Scriptina";
@@ -1159,20 +1160,73 @@ div.info-recipe div.transp-block h2.h2-con-3 {
 
 .footer {
   text-align: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
+div.left-footer ul,
+div.right-footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+div.left-footer ul li,
+div.right-footer ul li {
+  display: inline;
+}
+
+.right-footer,
 .left-footer {
+  border-top: 1px solid #c1bdb9;
+  border-bottom: 1px solid #c1bdb9;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+ul.ul-footer li a.foot-link {
+  color: rgb(86,83,76);
+}
+
+.foot-link:hover {
+  text-decoration: none;
+}
+
+div.center-footer a.navbar-brand {
+  color: rgb(86,83,76);
+}
+
+ul.ul-footer li:not(:first-child) a.foot-link:before {
+    content: "~";
+    padding-right: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: rgb(86,83,76);
+}
+
+@media (max-width: 992px) {
+
+  div.row div.col-lg-4,
+  div.row div.col-xs-12 {
+    padding-top: 15px;
+  }
+
+  div.center-footer {
+    margin-bottom: 20px;
+  }
 
 }
 
-.right-footer {
+
+@media (max-width: 460px) {
+
+  div.left-footer ul li,
+  div.right-footer ul li {
+    display: block;
+  }
   
-}
+  ul.ul-footer li:not(:first-child) a.foot-link:before {
+    content: "";
+  }
 
-.center-footer {
-  
-}
-
-div.navbar-nav ul li {
-  display: inline-block;
 }
