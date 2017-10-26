@@ -818,6 +818,18 @@ div.ready-in p {
 *  Responsive (col-lg-) mobile query fixing margins and font-size
 */
 
+.menu-icon {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  margin-top: -12px;
+  width: 20px;
+  height: 26px;
+  background-image: url(../img/menu-icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 @media (max-width: 992px) {
 
   div.bg3 {
@@ -903,6 +915,13 @@ div.ready-in p {
     min-width: 200px;
   }
 
+  .menu-icon {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    margin-left: -10px;
+  }
+
 }
 
   /*
@@ -918,6 +937,10 @@ div.ready-in p {
   .slider-center {
     margin: auto;
     width: 110px;
+  }
+
+  .menu-icon {
+    top: -30px;
   }
 
 }
@@ -938,6 +961,10 @@ div.ready-in p {
   .slider-arrow {
     width: 35px;
     height: 35px;
+  }
+
+  .menu-icon {
+    display: none;
   }
 
 }
@@ -1455,6 +1482,7 @@ div.right-footer ul li {
 
 ul.ul-footer li a.foot-link {
   color: rgb(86,83,76);
+  font-size: 1vw;
 }
 
 .foot-link:hover {
@@ -1490,6 +1518,10 @@ ul.ul-footer li:not(:first-child) a.foot-link:before {
 
   div.center-footer {
     margin-bottom: 20px;
+  }
+
+  ul.ul-footer li a.foot-link {
+    font-size: 14px;
   }
 
 }
